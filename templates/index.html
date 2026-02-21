@@ -56,21 +56,34 @@
     <div class="balloon" style="left:50%; background:green;"></div>
     <div class="balloon" style="left:70%; background:orange;"></div>
     <div class="balloon" style="left:90%; background:purple;"></div>
+<button onclick="speakMessage()" 
+        style="padding:15px 30px;
+               font-size:18px;
+               background:white;
+               color:#ff4081;
+               border:none;
+               border-radius:30px;
+               cursor:pointer;
+               margin-top:30px;">
+    💕 Tap Here for a Special Message 💕
+</button>
+
 <script>
-    window.onload = function() {
-        const message = "Krishnaja, you are the sunshine of our family. You are the most beautiful part of life for both Aksh and me. We are so lucky to have you. Happy Birthday my love.";
+function speakMessage() {
+    const message = "Hey, Krishna, you are the sunshine of our family. You are the most beautiful part of life for both Aksh and me. We are so lucky to have you. We love you.";
 
-        const speech = new SpeechSynthesisUtterance(message);
-        speech.lang = "en-US";
-        speech.rate = 0.9;   // speed
-        speech.pitch = 1.1;  // tone
-        speech.volume = 1;
+    const speech = new SpeechSynthesisUtterance(message);
+    speech.lang = "en-US";
+    speech.rate = 0.9;
+    speech.pitch = 1.1;
+    speech.volume = 1;
 
-        window.speechSynthesis.speak(speech);
-    };
+    window.speechSynthesis.speak(speech);
+}
 </script>
 </body>
 
 </html>
+
 
 
